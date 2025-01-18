@@ -1,0 +1,23 @@
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  @mixin circle($size, $bg-color) {
+    width: $size;
+    height: $size;
+    background-color: $bg-color;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  
+  @mixin font($family, $size, $weight: normal, $color: $text-color) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+  }

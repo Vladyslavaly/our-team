@@ -1,0 +1,123 @@
+
+
+@import 'vars';
+@import 'mixins';
+
+body {
+  font-family: $font-primary;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container_header {
+  margin-bottom: 50px;
+}
+
+.header_paragraf {
+  @include font($font-secondary, 16px, 300, $text-color);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.header_headline {
+  @include font($font-secondary, 36px, 800, $primary-color);
+}
+
+.header_picture img {
+  margin-top: 20px;
+}
+
+
+.container_main {
+  @include center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.container_photo {
+  .photo_img {
+    img {
+      width: 200px;
+      height: auto;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+
+.container_information {
+  text-align: left;
+
+  .text_title {
+    @include font($font-primary, 24px, 700, $text-color);
+    margin-bottom: 10px;
+  }
+
+  .text_sub {
+    @include font($font-secondary, 18px, 400, $primary-color);
+    margin-bottom: 20px;
+  }
+
+  .container_paragraf {
+    @include font($font-primary, 16px, 300, $text-color);
+    line-height: $line-height;
+    margin-bottom: 20px;
+  }
+
+  .yellow-lines {
+    @include center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .line {
+      width: 30px;
+      height: 4px;
+      background-color: $primary-color;
+      border-radius: $border-radius;
+    }
+  }
+
+  .button {
+    @include font($font-primary, 14px, 700, $primary-color);
+    padding: 10px 20px;
+    border: 2px solid $primary-color;
+    background: $secondary-color;
+    border-radius: $border-radius;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
+}
+
+
+.image-container {
+  display: flex;
+  gap: 10px;
+
+  .li_pictire {
+    list-style: none;
+
+    .circle {
+      @include circle(40px, $background-color);
+      border: 2px solid $primary-color;
+      @include center;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

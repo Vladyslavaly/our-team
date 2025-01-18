@@ -1,0 +1,152 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container_header {
+  margin-bottom: 50px;
+}
+
+.header_paragraf {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.header_headline {
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #f4c042;
+}
+
+.header_picture img {
+  margin-top: 20px;
+}
+
+.container_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 30px;
+}
+
+.container_photo .photo_img img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.container_information {
+  text-align: left;
+}
+.container_information .text_title {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+.container_information .text_sub {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #f4c042;
+  margin-bottom: 20px;
+}
+.container_information .container_paragraf {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.container_information .yellow-lines {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.container_information .yellow-lines .line {
+  width: 30px;
+  height: 4px;
+  background-color: #f4c042;
+  border-radius: 8px;
+}
+.container_information .button {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f4c042;
+  padding: 10px 20px;
+  border: 2px solid #f4c042;
+  background: #fff;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.container_information .button:hover {
+  background-color: #f4c042;
+  color: #fff;
+}
+
+.image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.image-container .li_pictire {
+  list-style: none;
+}
+.image-container .li_pictire .circle {
+  width: 40px;
+  height: 40px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #f4c042;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.image-container .li_pictire .circle img {
+  width: 20px;
+  height: 20px;
+}
