@@ -1,6 +1,4 @@
-// _mixins.scss
 
-// Центрування елементів
 @mixin center($direction: row) {
     display: flex;
     justify-content: center;
@@ -8,7 +6,7 @@
     flex-direction: $direction;
   }
   
-  // Шрифт
+ 
   @mixin font($family, $size, $weight: normal, $color: $text-color) {
     font-family: $family;
     font-size: $size;
@@ -16,7 +14,7 @@
     color: $color;
   }
   
-  // Круглі елементи
+
   @mixin circle($size, $border-color: #ccc) {
     width: $size;
     height: $size;

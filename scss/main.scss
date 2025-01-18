@@ -1,9 +1,9 @@
-// main.scss
+
 
 @import 'vars';
 @import 'mixins';
 
-// Загальні стилі
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,7 +15,7 @@ body {
   color: $text-color;
 }
 
-// Контейнер
+
 .container {
   height: 100vh;
   max-width: $container-width;
@@ -24,7 +24,7 @@ body {
   margin-bottom: $margin-top-bottom;
 }
 
-// Заголовки
+
 .header_paragraf {
   @include font($font-secondary, 18px, 500, #898F8F);
   margin-bottom: 15px;
@@ -35,7 +35,7 @@ body {
   margin-bottom: 40px;
 }
 
-// Заголовок і підзаголовок
+
 .container_header {
   @include center(column);
   text-align: center;
@@ -65,7 +65,7 @@ body {
   }
 }
 
-// Основний контент
+
 .container_main {
   @include center;
   align-items: center;
@@ -112,7 +112,7 @@ body {
   }
 }
 
-// Інформація
+
 .container_information {
   padding: 70px 0 70px 85px;
   width: 50%;
@@ -172,7 +172,6 @@ body {
   }
 }
 
-// Соціальні іконки
 .image-container {
   list-style: none;
   gap: $gap;
