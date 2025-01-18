@@ -1,84 +1,158 @@
-
+// main.scss
 
 @import 'vars';
 @import 'mixins';
 
-body {
-  font-family: $font-primary;
-  background-color: $background-color;
-  margin: 0;
+// Загальні стилі
+* {
+  box-sizing: border-box;
   padding: 0;
-  text-align: center;
+  margin: 0;
 }
 
+body {
+  font-family: $font-secondary;
+  color: $text-color;
+}
+
+// Контейнер
 .container {
-  max-width: 1200px;
+  height: 100vh;
+  max-width: $container-width;
   margin: 0 auto;
-  padding: 20px;
+  margin-top: $margin-top-bottom;
+  margin-bottom: $margin-top-bottom;
 }
 
-.container_header {
-  margin-bottom: 50px;
-}
-
+// Заголовки
 .header_paragraf {
-  @include font($font-secondary, 16px, 300, $text-color);
-  text-transform: uppercase;
-  margin-bottom: 10px;
+  @include font($font-secondary, 18px, 500, #898F8F);
+  margin-bottom: 15px;
 }
 
 .header_headline {
-  @include font($font-secondary, 36px, 800, $primary-color);
+  @include font($font-primary, 60px, 900, $primary-color);
+  margin-bottom: 40px;
 }
 
-.header_picture img {
-  margin-top: 20px;
-}
+// Заголовок і підзаголовок
+.container_header {
+  @include center(column);
+  text-align: center;
+  margin-bottom: 40px;
 
+  .header_picture {
+    position: relative;
+    width: 450px;
+    margin: 0 auto;
 
-.container_main {
-  @include center;
-  flex-direction: row;
-  gap: 30px;
-}
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      border: 1px solid $primary-color;
+      width: 210px;
+    }
 
-.container_photo {
-  .photo_img {
-    img {
-      width: 200px;
-      height: auto;
-      border-radius: $border-radius;
+    &::after {
+      right: 0;
+    }
+
+    &::before {
+      left: 0;
     }
   }
 }
 
+// Основний контент
+.container_main {
+  @include center;
+  align-items: center;
+}
 
+.container_photo {
+  position: relative;
+  padding: 70px 85px 70px 0;
+  border-right: 2px solid $primary-color;
+  width: 50%;
+
+  .photo_img {
+    width: 400px;
+    height: 400px;
+    border: 1px solid $primary-color;
+
+    .photo_img-man {
+      width: 100%;
+      z-index: 99;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: -200px;
+    width: 430px;
+    height: 430px;
+    background: $secondary-color;
+    transform: translateX(200px) rotate(135deg);
+    z-index: -3;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 52px;
+    left: -18px;
+    width: 430px;
+    height: 430px;
+    border: 2px solid $primary-color;
+    z-index: -4;
+  }
+}
+
+// Інформація
 .container_information {
-  text-align: left;
+  padding: 70px 0 70px 85px;
+  width: 50%;
+  @include center(column);
+  text-align: center;
 
   .text_title {
-    @include font($font-primary, 24px, 700, $text-color);
-    margin-bottom: 10px;
+    @include font($font-primary, 36px, 900, $gray-color);
+    margin-bottom: 60px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 60px;
+      width: 100px;
+      border: 1px solid $primary-color;
+    }
   }
 
   .text_sub {
-    @include font($font-secondary, 18px, 400, $primary-color);
-    margin-bottom: 20px;
+    @include font($font-secondary, 24px, 400, $gray-color);
+    margin-bottom: 30px;
   }
 
   .container_paragraf {
-    @include font($font-primary, 16px, 300, $text-color);
+    @include font($font-secondary, 14px, 500, $text-color);
     line-height: $line-height;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .yellow-lines {
     @include center;
-    gap: 10px;
+    gap: $gap;
     margin-bottom: 20px;
 
     .line {
-      width: 30px;
+      display: block;
+      width: 20px;
       height: 4px;
       background-color: $primary-color;
       border-radius: $border-radius;
@@ -86,37 +160,34 @@ body {
   }
 
   .button {
-    @include font($font-primary, 14px, 700, $primary-color);
-    padding: 10px 20px;
+    @include font($font-tertiary, 14px, 700, $primary-color);
+    padding: 5px 10px;
+    background-color: $secondary-color;
     border: 2px solid $primary-color;
-    background: $secondary-color;
-    border-radius: $border-radius;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
 
-  .button:hover {
-    background-color: $primary-color;
-    color: $secondary-color;
+    &:hover {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
   }
 }
 
-
+// Соціальні іконки
 .image-container {
-  display: flex;
-  gap: 10px;
+  list-style: none;
+  gap: $gap;
+  margin-bottom: 50px;
+  @include center;
 
   .li_pictire {
     list-style: none;
+    padding: 0;
 
     .circle {
-      @include circle(40px, $background-color);
-      border: 2px solid $primary-color;
-      @include center;
+      @include circle(30px, #ccc);
 
       img {
         width: 20px;
-        height: 20px;
       }
     }
   }
